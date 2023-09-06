@@ -1,0 +1,21 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: resource
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://127.0.0.1:9000
+feign:
+  client:
+    config:
+      default: #配置超时时间
+        connect-timeout: 10000
+        read-timeout: 10000
+
+logging:
+  config: classpath:logback-config.xml
+
+
